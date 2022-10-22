@@ -26,6 +26,28 @@ Vamos a Watson Assitant y creamos una extension personalizada utilizando este ar
 
 Creamos un nuevo asistente con una accion y en uno de sus pasos utilizamos la extension para comprabar que estamos enviando y recibiendo informacion desde nuestro API.
 
+
+### Configurar Extension Personalizada en Watson Assistant
+
+Pasos para crear una extension:
+- Dentro de Watson Assistant seleccionar la opcion "Integrations" desde la barra laterial izquierda
+- Hacer clic en el boton "Build custom extension"
+- En el paso "Get started" hacer clic en el boton "Next"
+- En el paso "Basic information" ingresar un nombre y una descripcion, y luego seleccionar "Next"
+- En el paso "Import OpenAPI" subir el archivo .json que generaste anteriormente
+- Luego en el paso "Review extension" seleccionar "Finish"
+
+Pasos para agregar la extension a tu asistente:
+- Ubica tu extension y haz clic en la opcion "Add +"
+- Seleciona la opcion "Add" de la ventana emergente
+- Luego selecciona el boton "Next" en el paso "Get started"
+- Haz clic en el boton "Next" en el paso "Authentication"
+- Luego selecciona el boton "Finish", y
+- Finalmente haz clic en el boton "Close"
+
+
+
+
 ### Informacion complementaria:
 
 - [OpenAPI Specification](https://swagger.io/specification/)
@@ -35,3 +57,4 @@ Creamos un nuevo asistente con una accion y en uno de sus pasos utilizamos la ex
 - [Deploy Proyecto web con Heroku CLI](https://www.youtube.com/watch?v=6WcBSNxEow8)
 - [Como crear y probar tu API de manera sencilla](https://www.youtube.com/watch?v=AWcm56_eNZg)
 - [Swagger Editor con el ejemplo de Petstore](https://editor.swagger.io/)
+
