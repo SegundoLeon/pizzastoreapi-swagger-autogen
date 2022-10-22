@@ -45,7 +45,7 @@ Pasos para agregar la extension a tu asistente:
 - Luego selecciona el boton "Finish", y
 - Finalmente haz clic en el boton "Close"
 
-
+![Resultado](https://raw.githubusercontent.com/SegundoLeon/pizzastoreapi-swagger-autogen/main/assets/resultado.png)
 
 
 ### Informacion complementaria:
