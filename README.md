@@ -1,6 +1,6 @@
 # PizzaStoreAPI en Node con swagger-autogen
 
-Este proyecto pretende servir de guia para construir una API REST con NodeJS y Express, y para generar un documento OpenAPI en formato .json utilizando swagger-autogen. Este ultimo archivo permitirá crear de una Extension Personalizada en Watson Assistant para poder realizar consultas a un nuestra API desde las acciones de nuestro asistente.
+Este proyecto pretende servir de guia para construir una API REST con NodeJS y Express, y para generar un documento OpenAPI en formato .json utilizando la librería swagger-autogen. Este ultimo archivo permitirá crear de una Extension Personalizada en Watson Assistant para poder realizar consultas a un nuestra API desde las acciones de nuestro asistente.
 
 ### Como utilizar este ejemplo
 Sigua los siguientes pasos para probar esta API en su entorno local:
