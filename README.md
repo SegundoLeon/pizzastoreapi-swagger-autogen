@@ -1,8 +1,8 @@
 # API en NodeJS con swagger-autogen para Watson Assistant
 
-Este proyecto pretende servir de guia para construir una API REST con NodeJS y Express, y para generar un documento OpenAPI en formato .json utilizando la librería swagger-autogen. Este ultimo archivo permitirá crear una Extension Personalizada en Watson Assistant para realizar consultas en esta API desde las acciones de nuestro asistente.
+Este proyecto pretende servir de guia para construir una API REST con NodeJS y Express, y para generar un documento OpenAPI v3.0 en formato .json utilizando la librería swagger-autogen. Este ultimo archivo permitirá crear una Extension Personalizada en Watson Assistant para realizar consultas en esta API desde las acciones de nuestro asistente.
 
-### Como utilizar este ejemplo
+### Publicar API y generar definición del servicio
 Sigua los siguientes pasos para probar esta API en su entorno local:
 
 Descarge este codigo y abralo con Visual Code u otro editor
@@ -24,11 +24,7 @@ Ahora vamos a generar el archivo .json con la definicion del servicio. Para ello
 $ node swagger
 ```
 
-Comprobamos con el explorador del editor que se ha generado el archivo: swagger-output.json. 
-
-Vamos a Watson Assitant y creamos una extension personalizada utilizando este archivo
-
-Creamos un nuevo asistente con una accion y en uno de sus pasos utilizamos la extension para comprabar que estamos enviando y recibiendo informacion desde nuestro API.
+Finalmente comprobamos con el explorador del editor que se ha generado el archivo: swagger-output.json. 
 
 
 ### Configurar Extension Personalizada en Watson Assistant
@@ -53,6 +49,22 @@ Pasos para agregar la extension a tu asistente:
 - Finalmente haz clic en el boton "Close"
 
 ![Resultado](https://raw.githubusercontent.com/SegundoLeon/pizzastoreapi-swagger-autogen/main/assets/resultado.png)
+
+
+### Utilizar la Extension Personalizada en Watson Assistant
+
+Creamos un nuevo asistente con una accion y en uno de sus pasos utilizamos la extension para comprabar que estamos enviando y recibiendo informacion desde nuestro API.
+
+Pasos para utilizar la extensión dentro de una accion:
+
+- Cree una accion, por ejemplo de nombre: "Quiero ordenar una pizza"
+- Cree un paso para conocer la pizza preferida por el cliente
+- Cree un segundo paso para confirmar el pedido
+- Cree un tercer paso para enviar el pedido a la API. En la seccion "And then" seleccione la opcion "Use an extension"
+- En la ventana "Extension setup" seleccione la extension agregada anteriormente; luego seleccione la operacion "/bills POST"; despues, en el parametro "producto" seleccione el paso donde el usuario seleccionó el nombre de la pizza; y luego seleccione "Apply".
+- Comprobamos que la acción esta funcionando correctamente.
+
+![Configurar acción](https://raw.githubusercontent.com/SegundoLeon/pizzastoreapi-swagger-autogen/main/assets/accion.png)
 
 
 ### Informacion complementaria:
