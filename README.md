@@ -33,7 +33,7 @@ Pasos para crear una extension:
 - Dentro de Watson Assistant seleccionar la opcion "Integrations" desde la barra laterial izquierda
 - Hacer clic en el boton "Build custom extension"
 
-![Build custom extension](https://raw.githubusercontent.com/SegundoLeon/pizzastoreapi-swagger-autogen/main/assets/paso1.png)
+![Build custom extension](https://raw.githubusercontent.com/SegundoLeon/pizzastoreapi-swagger-autogen/main/assets/extension.png)
 
 - En el paso "Get started" hacer clic en el boton "Next"
 - En el paso "Basic information" ingresar un nombre y una descripcion, y luego seleccionar "Next"
