@@ -44,4 +44,37 @@ router.get('/bills/:numero', (req, res) => {
   else res.send(bill);
 });
 
+router.post('/bills', (req, res) => {
+  const bill = {
+    numero: req.body.numero,
+    subtotal: req.body.subtotal,
+    cajero: req.body.cajero,
+    estado: req.body.estado
+  }
+  /* #swagger.requestBody = {
+        required: true,
+        content: {
+          "application/json": {
+            schema: {
+              $ref: "#/definitions/Bill"
+            }
+          }
+        }
+  } */
+
+  /* #swagger.responses[200] = {
+        description: "Operacion exitosa",
+        content: {
+          "application/json": {
+            schema: {
+              $ref: "#/definitions/Bill"
+            }
+          }
+        }
+  } */
+
+  bills.push(bill);
+  res.send(bill);
+})
+
 module.exports = router;

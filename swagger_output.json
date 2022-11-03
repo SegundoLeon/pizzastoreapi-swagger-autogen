@@ -1,0 +1,138 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Pizza Store API",
+    "description": "Proyecto Pizza Store API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://infobaseapi.herokuapp.com/api"
+    }
+  ],
+  "paths": {
+    "/bills": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "token",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Todas las boletas",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/myReferencedBillArray"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Operacion exitosa",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Bill"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Bill"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/bills/{numero}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "numero",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Una boleta",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Bill"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Bill": {
+        "type": "object",
+        "properties": {
+          "numero": {
+            "type": "string",
+            "description": "numero de la boleta",
+            "example": "015673"
+          },
+          "subtotal": {
+            "type": "number",
+            "description": "sub total de la boleta",
+            "example": 99.99
+          },
+          "cajero": {
+            "type": "string",
+            "description": "persona que cobro el servicio",
+            "example": "Carlos Reyes"
+          },
+          "estado": {
+            "type": "string",
+            "description": "estado del servicio",
+            "example": "Despachado"
+          }
+        },
+        "example": {
+          "numero": "015673",
+          "subtotal": 99.99,
+          "cajero": "Carlos Reyes",
+          "estado": "Despachado"
+        }
+      },
+      "myReferencedBillArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Bill"
+        }
+      }
+    }
+  }
+}
