@@ -14,18 +14,10 @@
     "/bills": {
       "get": {
         "description": "",
-        "parameters": [
-          {
-            "name": "token",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
-            "description": "Todas las boletas",
+            "description": "Operacion exitosa",
             "content": {
               "application/json": {
                 "schema": {
@@ -78,7 +70,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Una boleta",
+            "description": "Operacion exitosa",
             "content": {
               "application/json": {
                 "schema": {

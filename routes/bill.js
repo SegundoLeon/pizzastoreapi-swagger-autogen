@@ -11,9 +11,8 @@ const bills = [
 ];
 
 router.get('/bills', (req, res) => {
-  const token = req.query.token;  
   /* #swagger.responses[200] = {
-          description: "Todas las boletas",
+          description: "Operacion exitosa",
           content: {
             "application/json": {
               schema: { 
@@ -27,10 +26,9 @@ router.get('/bills', (req, res) => {
 });
 
 router.get('/bills/:numero', (req, res) => {
-  //const bill = bills.find(c => c.numero === parseInt(req.params.numero));
   const bill = bills.find(c => c.numero === req.params.numero);
   /* #swagger.responses[200] = {
-          description: "Una boleta",
+          description: "Operacion exitosa",
           content: {
             "application/json": {
               schema: { 
@@ -61,9 +59,9 @@ router.post('/bills', (req, res) => {
             }
           }
         }
-  } */
+      }
 
-  /* #swagger.responses[200] = {
+     #swagger.responses[200] = {
         description: "Operacion exitosa",
         content: {
           "application/json": {
@@ -72,7 +70,8 @@ router.post('/bills', (req, res) => {
             }
           }
         }
-  } */
+      }
+  */
 
   bills.push(bill);
   res.send(bill);
