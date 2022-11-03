@@ -3,11 +3,11 @@ const router = express.Router();
 
 // arreglo de boletas
 const bills = [
-  {numero: '022499', subtotal: 99.10, cajero: 'Juan Perez', estado: 'Entregado'},
-  {numero: '022156', subtotal: 158.90, cajero: 'Maria Sanchez', estado: 'Despachado'},
-  {numero: '022456', subtotal: 58.70, cajero: 'Cesar Lopez', estado: 'Entregado'},
-  {numero: '022787', subtotal: 110.50, cajero: 'Luis Garcia', estado: 'En preparacion'},
-  {numero: '022441', subtotal: 76.20, cajero: 'Roberto Chavez', estado: 'Despachado'},
+  {numero: '022499', subtotal: 99.10, cajero: 'Juan Perez', estado: 'Entregado', producto: 'Americana'},
+  {numero: '022156', subtotal: 158.90, cajero: 'Maria Sanchez', estado: 'Despachado', producto: 'Hawaiana'},
+  {numero: '022456', subtotal: 58.70, cajero: 'Cesar Lopez', estado: 'Entregado', producto: 'Napolitana'},
+  {numero: '022787', subtotal: 110.50, cajero: 'Luis Garcia', estado: 'En preparacion', producto: 'Napolitana'},
+  {numero: '022441', subtotal: 76.20, cajero: 'Roberto Chavez', estado: 'Despachado', producto: 'Napolitana'},
 ];
 
 router.get('/bills', (req, res) => {
@@ -46,10 +46,11 @@ router.get('/bills/:numero', (req, res) => {
 
 router.post('/bills', (req, res) => {
   const bill = {
-    numero: req.body.numero,
-    subtotal: req.body.subtotal,
-    cajero: req.body.cajero,
-    estado: req.body.estado
+    numero: (Math.floor(100000 + Math.random() * 900000)).toString(),
+    subtotal: Math.floor(100 + Math.random() * 900),
+    cajero: "Raquel Salas",
+    estado: "Registrado",
+    producto: req.body.producto
   }
   /* #swagger.requestBody = {
         required: true,
