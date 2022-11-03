@@ -1,6 +1,6 @@
 # API en NodeJS con swagger-autogen para Watson Assistant
 
-Este proyecto pretende servir de guia para construir una API REST con NodeJS y Express, y para generar un documento OpenAPI en formato .json utilizando la librería swagger-autogen. Este ultimo archivo permitirá crear una Extension Personalizada en Watson Assistant para poder realizar consultas a un nuestra API desde las acciones de nuestro asistente.
+Este proyecto pretende servir de guia para construir una API REST con NodeJS y Express, y para generar un documento OpenAPI en formato .json utilizando la librería swagger-autogen. Este ultimo archivo permitirá crear una Extension Personalizada en Watson Assistant para realizar consultas en esta API desde las acciones de nuestro asistente.
 
 ### Como utilizar este ejemplo
 Sigua los siguientes pasos para probar esta API en su entorno local:
@@ -12,15 +12,19 @@ Instale las dependencias del proyecto desde una terminal:
 $ npm install
 ```
 
+Luego debes publicar esta API en tu nube favorita y actualizar la URL en el archivo swagger.js. 
+
+> Note: En este caso se creo una aplicacion en Heroku conectada a este repositorio GitHub y configurada para realizar un despliegue automatico. Aqui la ruta donde se encuentra publicada:
+
+[https://infobaseapi.herokuapp.com/](https://infobaseapi.herokuapp.com/)
+
 Ahora vamos a generar el archivo .json con la definicion del servicio. Para ello ejecutamos el siguiente comando en la terminal:
 
 ```bash
 $ node swagger
 ```
 
-Comprobamos con el explorador del editor que se ha generado el archivo: swagger-output.json. Este archivo esta vinculado con la version nube publicada en Heroku en el siguente enlace:
-
-[https://infobaseapi.herokuapp.com/](https://infobaseapi.herokuapp.com/)
+Comprobamos con el explorador del editor que se ha generado el archivo: swagger-output.json. 
 
 Vamos a Watson Assitant y creamos una extension personalizada utilizando este archivo
 
@@ -60,5 +64,5 @@ Pasos para agregar la extension a tu asistente:
 - [Cómo documentar API con Swagger & Node js & Express](https://www.youtube.com/watch?v=rIWGcxnVIA8)
 - [Deploy Proyecto web con Heroku CLI](https://www.youtube.com/watch?v=6WcBSNxEow8)
 - [Como crear y probar tu API de manera sencilla](https://www.youtube.com/watch?v=AWcm56_eNZg)
-
+- [Online Markdown Editor](https://dillinger.io/)
 
