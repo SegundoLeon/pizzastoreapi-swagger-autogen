@@ -118,13 +118,19 @@
             "type": "string",
             "description": "estado del servicio",
             "example": "Despachado"
+          },
+          "producto": {
+            "type": "string",
+            "description": "nombre del producto",
+            "example": "Americana"
           }
         },
         "example": {
           "numero": "015673",
           "subtotal": 99.99,
           "cajero": "Carlos Reyes",
-          "estado": "Despachado"
+          "estado": "Despachado",
+          "producto": "Americana"
         }
       },
       "myReferencedBillArray": {
