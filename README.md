@@ -14,9 +14,9 @@ $ npm install
 
 Luego debes publicar esta API en tu nube favorita y actualizar la URL en el archivo swagger.js. 
 
-> Note: En este caso se creo una aplicacion en Heroku conectada a este repositorio GitHub y configurada para realizar un despliegue automatico. Aqui la ruta donde se encuentra publicada:
 
-[https://infobaseapi.herokuapp.com/](https://infobaseapi.herokuapp.com/)
+> Note: En este caso se creo una aplicacion en Heroku conectada a este repositorio GitHub y configurada para realizar un despliegue automatico. Aqui la ruta donde se encuentra publicada: [https://infobaseapi.herokuapp.com/](https://infobaseapi.herokuapp.com/)
+
 
 Ahora vamos a generar el archivo .json con la definicion del servicio. Para ello ejecutamos el siguiente comando en la terminal:
 
