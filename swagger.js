@@ -1,8 +1,10 @@
-const swaggerAutogen = require("swagger-autogen")({openapi: "3.0.0"});
-const outputFile = "./swagger_output.json";
-const endpointsFiles = ["./routes/bill.js"];
+import swaggerAutogen from 'swagger-autogen';
+
+const outputFile = "./swagger_output.json"
+const endpointsFiles = ['./src/routes/bills.routes.js']
 
 const doc = {
+  openapi: '3.0.0',
   info: {
     title: 'Pizza Store API',
     description: 'Proyecto Pizza Store API',
@@ -17,7 +19,7 @@ const doc = {
       Bill: {
         type: "object",
         properties: {
-          numero: {
+          id: {
             type: "string",
             description: "numero de la boleta",
             example: "015673"
@@ -27,28 +29,28 @@ const doc = {
             description: "sub total de la boleta",
             example: 99.99
           },
-          cajero: {
+          attendedby: {
             type: "string",
             description: "persona que cobro el servicio",
             example: "Carlos Reyes"
           },
-          estado: {
+          state: {
             type: "string",
             description: "estado del servicio",
             example: "Despachado"
           },
-          producto: {
+          product: {
             type: "string",
             description: "nombre del producto",
             example: "Americana"
           }          
         },
         example: {
-          numero: "015673",
+          id: "015673",
           subtotal: 99.99,
-          cajero: "Carlos Reyes",
-          estado: "Despachado",
-          producto: "Americana"
+          attendedby: "Carlos Reyes",
+          state: "Despachado",
+          product: "Americana"
         }
       }
     }
@@ -58,4 +60,4 @@ const doc = {
   }
 };
 
-swaggerAutogen(outputFile, endpointsFiles, doc);
+swaggerAutogen()(outputFile, endpointsFiles, doc);
